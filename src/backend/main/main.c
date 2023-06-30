@@ -196,6 +196,7 @@ main(int argc, char *argv[])
     PostgresSingleUserMain(argc, argv,
       strdup(get_user_name_or_exit(progname)));
   else
+    /* RDT: 20230630 - Aqui entra em ação o server, com a visão mais tradicional. */
     PostmasterMain(argc, argv);
   /* the functions above should not return */
   abort();

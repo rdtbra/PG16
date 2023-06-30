@@ -1460,7 +1460,7 @@ PostmasterMain(int argc, char *argv[])
 
 	/* Some workers may be scheduled to start now */
 	maybe_start_bgworkers();
-
+	
         /* RDT: 20230630 - Loop do servidor. */
 	status = ServerLoop();
 

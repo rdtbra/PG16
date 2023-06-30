@@ -584,6 +584,7 @@ HANDLE		PostmasterHandle;
  */
 void
 PostmasterMain(int argc, char *argv[])
+/* RDT: 20230630 - Este é o loop principal. */
 {
 	int			opt;
 	int			status;
@@ -1460,6 +1461,7 @@ PostmasterMain(int argc, char *argv[])
 	/* Some workers may be scheduled to start now */
 	maybe_start_bgworkers();
 
+        /* RDT: 20230630 - Loop do servidor. */
 	status = ServerLoop();
 
 	/*

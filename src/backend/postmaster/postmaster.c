@@ -1464,7 +1464,7 @@ PostmasterMain(int argc, char *argv[])
         /* RDT: 20230630 - Loop do servidor. */
 	status = ServerLoop();
 
-	/*
+	/* 
 	 * ServerLoop probably shouldn't ever return, but if it does, close down.
 	 */
 	ExitPostmaster(status != STATUS_OK);
